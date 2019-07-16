@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Ismail Tasdelen.", "Security Researcher.", "Bug Bounty Hunter.", "Developer."],
+      strings: ["are Alice&Mallory", "can provide InfoSec Training", "can get into InfoSec Research", "also can do Pentest"],
       typeSpeed: 100,
       loop: true,
     });
