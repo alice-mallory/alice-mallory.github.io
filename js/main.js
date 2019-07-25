@@ -132,4 +132,49 @@ jQuery(document).ready(function ($) {
     loop: true,
   });
 
+  var waypoint_hero = new Waypoint({
+    element: document.getElementById('hero'),
+    handler: function(direction) {
+      console.log('Scrolled to hero!');
+      document.getElementById('bar-hero').classList.add('menu-active');
+      document.getElementById('bar-about').classList.remove("menu-active");
+      document.getElementById('bar-facts').classList.remove("menu-active");
+      document.getElementById('bar-contact').classList.remove("menu-active");
+    },
+    offset: -10
+  });
+
+  var waypoint_about = new Waypoint({
+    element: document.getElementById('about'),
+    handler: function(direction) {
+      console.log('Scrolled to about!');
+      document.getElementById('bar-about').classList.add('menu-active');
+      document.getElementById('bar-hero').classList.remove("menu-active");
+      document.getElementById('bar-facts').classList.remove("menu-active");
+      document.getElementById('bar-contact').classList.remove("menu-active");
+    }
+  });
+
+  var waypoint_facts = new Waypoint({
+    element: document.getElementById('facts'),
+    handler: function(direction) {
+      console.log('Scrolled to facts!');
+      document.getElementById('bar-facts').classList.add('menu-active');
+      document.getElementById('bar-about').classList.remove("menu-active");
+      document.getElementById('bar-hero').classList.remove("menu-active");
+      document.getElementById('bar-contact').classList.remove("menu-active");
+    }
+  });
+
+  var waypoint_contact = new Waypoint({
+    element: document.getElementById('contact'),
+    handler: function(direction) {
+      console.log('Scrolled to contact!');
+      document.getElementById('bar-contact').classList.add('menu-active');
+      document.getElementById('bar-about').classList.remove("menu-active");
+      document.getElementById('bar-facts').classList.remove("menu-active");
+      document.getElementById('bar-hero').classList.remove("menu-active");
+    },
+  })
+
 });
